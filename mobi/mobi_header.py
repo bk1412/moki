@@ -981,12 +981,6 @@ class MobiHeader:
                         else:
                             addValue(name, unicode_str(str(value)))
                     else:
-                        print(
-                            "Warning: Bad key, size, value combination detected in EXTH ",
-                            id,
-                            size,
-                            hexlify(content),
-                        )
                         addValue(name, hexlify(content))
                 elif id in MobiHeader.id_map_hexstrings:
                     name = MobiHeader.id_map_hexstrings[id]
